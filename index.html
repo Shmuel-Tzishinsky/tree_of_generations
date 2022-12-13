@@ -105,8 +105,8 @@
         const inter = setInterval(() => {
           if (plusOrMinus) {
             yPosCanvasTimeline++;
-            if (yPosCanvasTimeline >= -3) {
-              yPosCanvasTimeline = -3;
+            if (yPosCanvasTimeline >= -10) {
+              yPosCanvasTimeline = -10;
               clearInterval(inter);
             }
           } else {
@@ -140,7 +140,7 @@
 
       function divMove(e) {
         const pos = -((e.clientY / window.innerHeight) * 100).toFixed(0);
-        if (pos >= -100 && pos <= -3) yPosCanvasTimeline = pos;
+        if (pos >= -100 && pos <= -10) yPosCanvasTimeline = pos;
         canvasTimelineContainer.style.bottom = `${yPosCanvasTimeline}vh`;
       }
 
