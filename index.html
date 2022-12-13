@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+    <style>
+      body {
+        margin: 0;
+        background-color: #333;
+        overflow: hidden;
+        border-radius: 0.3em;
+        padding: 10px;
+        box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(43, 12, 1, 0.1);
+      }
+      .canvas-timeline {
+        position: absolute;
+        bottom: -100vh;
+        width: 100vw;
+        background-color: white;
+        height: 100vh;
+        box-shadow: 0 0px 10px 2px #9f9b9b;
+      }
+      .moving-btn {
+        width: 50px;
+        display: flex;
+        height: 12px;
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translate(-50%, calc(-50% - -44px));
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .center-btn {
+        cursor: grab;
+        background-color: rgb(169, 160, 160);
+      }
+      .center-btn span {
+        pointer-events: none;
+        width: 35px;
+        margin: 0px auto;
+        height: 0.5px;
+        background-color: white;
+      }
+      .close-moving {
+        background-color: rgb(169, 160, 160);
+        cursor: pointer;
+        transform: translate(0, 0);
+        left: 20px;
+        width: 20px;
+        height: 12px;
+        top: -12px;
+        display: grid;
+        place-items: center;
+      }
+      .close-moving svg {
+        width: 65%;
+        height: 90%;
+        fill: #fff;
+        color: #fff;
+        transform: rotate(180deg);
+        margin: 0 auto;
+      }
+      .close-moving g {
+        fill: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvasTree"></canvas>
+    <div class="canvas-timeline">
+      <div class="moving-btn center-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="moving-btn close-moving">
+        <svg version="1.0" viewBox="0 0 1280.000000 1130.000000" preserveAspectRatio="xMidYMid meet">
+          <g transform="translate(0.000000,1130.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+            <path
+              d="M6266 11289 c-200 -27 -402 -141 -536 -301 -38 -46 -432 -718 -1284 -2194 -3554 -6153 -4323 -7485 -4358 -7554 -61 -121 -81 -211 -81 -375 -1 -115 3 -154 21 -220 91 -327 350 -567 681 -629 75 -14 614 -16 5691 -16 5077 0 5616 2 5691 16 331 62 590 302 681 629 18 66 22 105 21 220 0 164 -20 254 -81 375 -21 41 -756 1317 -1633 2835 -877 1518 -2126 3680 -2775 4804 -817 1416 -1196 2063 -1234 2109 -112 134 -277 239 -445 283 -93 24 -256 32 -359 18z"
+            />
+          </g>
+        </svg>
+      </div>
+      <canvas id="canvasTimeline"></canvas>
+    </div>
+
+    <script src="./clases/Tree.js"></script>
+    <script src="./clases/Node.js"></script>
+    <script src="./js/sizingTree.js"></script>
+    <script src="./js/tree.js"></script>
+    <script src="./js/addEventListrner.js"></script>
+    <!-- line canvas -->
+
+    <script src="./js/sizingTimeline.js"></script>
+    <script src="./line.js"></script>
+
+    <script>
+      const movingEle = document.querySelector(".center-btn");
+      const toggleEel = document.querySelector(".close-moving");
+      const canvasTimelineContainer = document.querySelector(".canvas-timeline");
+      let yPosCanvasTimeline = -100;
+
+      function speedClose(speed, plusOrMinus) {
+        const inter = setInterval(() => {
+          if (plusOrMinus) {
+            yPosCanvasTimeline++;
+            if (yPosCanvasTimeline >= -3) {
+              yPosCanvasTimeline = -3;
+              clearInterval(inter);
+            }
+          } else {
+            yPosCanvasTimeline--;
+            if (yPosCanvasTimeline <= -100) {
+              clearInterval(inter);
+            }
+          }
+          toggleEel.querySelector("svg").style.transform = `rotate(${yPosCanvasTimeline === -100 ? 0 : 180}deg)`;
+          canvasTimelineContainer.style.bottom = `${yPosCanvasTimeline}vh`;
+        }, speed);
+      }
+
+      function toggleCanvas(e, b) {
+        if (yPosCanvasTimeline === -100) {
+          speedClose(5, b || true);
+        } else {
+          speedClose(5, b);
+        }
+      }
+
+      function mouseDown(e) {
+        movingEle.style.cursor = "grabbing";
+        window.addEventListener("mousemove", divMove, true);
+      }
+
+      function mouseUp() {
+        movingEle.style.cursor = "grab";
+        window.removeEventListener("mousemove", divMove, true);
+      }
+
+      function divMove(e) {
+        const pos = -((e.clientY / window.innerHeight) * 100).toFixed(0);
+        if (pos >= -100 && pos <= -3) yPosCanvasTimeline = pos;
+        canvasTimelineContainer.style.bottom = `${yPosCanvasTimeline}vh`;
+      }
+
+      window.addEventListener("mouseup", mouseUp);
+      movingEle.addEventListener("mousedown", mouseDown);
+      toggleEel.addEventListener("click", toggleCanvas);
+    </script>
+  </body>
+</html>

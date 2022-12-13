@@ -1,0 +1,78 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns: 170px 1fr;
+}
+#control_panel {
+  max-width: 170px;
+  background-color: rgb(33, 44, 48);
+  text-align: center;
+}
+
+.title-panel {
+  color: #ffffff;
+  font-size: 1.2em;
+  padding: 22px 8px;
+  font-family: sans-serif;
+}
+
+#control_panel button {
+  font-size: 20px;
+  width: calc(100% - 10px);
+  background-color: #36464e;
+  border: 0;
+  padding: 10px 0;
+  border-radius: 5px;
+  margin: 2px 5px;
+  white-space: nowrap;
+  font-size: 0.9em;
+  color: rgb(132, 159, 172);
+  cursor: pointer;
+  transition: 150ms color ease-in-out;
+}
+
+#control_panel button:hover {
+  color: white;
+}
+
+#information_panel {
+  background-color: rgb(48 71 78);
+  border: 3px;
+  border-style: double;
+  color: white;
+  border-color: rgb(26 40 44);
+  margin: 100px 0px 0 0px;
+}
+
+#information_panel ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+#information_panel ul li {
+  padding: 12px 0 12px 5px;
+  white-space: nowrap;
+  color: rgb(132, 159, 172);
+}
+
+#information_panel ul li span {
+  padding: 12px 0;
+  white-space: nowrap;
+  color: white;
+}
+
+#main {
+  padding: 10px;
+}
+
+#main #canvasTree {
+  cursor: auto;
+  box-shadow: 0 0 10px -3px #333;
+  border-radius: 10px;
+}

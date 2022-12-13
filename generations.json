@@ -1,0 +1,495 @@
+[
+    {
+        "id": 1,
+        "name": "אדם",
+        "born": 0,
+        "gender": "male",
+        "parents": {
+            "fatherID": null,
+            "matherID": null
+        },
+        "partner": [],
+        "deceased": 930
+    },
+    {
+        "id": 2,
+        "name": "חוה",
+        "born": 0,
+        "gender": "female",
+        "parents": {
+            "fatherID": null,
+            "matherID": null
+        },
+        "partner": [
+            {
+                "id": 1,
+                "name": "אדם"
+            }
+        ],
+        "deceased": null
+    },
+    {
+        "id": 3,
+        "parents": {
+            "fatherID": 1,
+            "matherID": 2
+        },
+        "name": "קין",
+        "born": null,
+        "gender": "male",
+        "deceased": null,
+        "partner": []
+    },
+    {
+        "id": 4,
+        "parents": {
+            "fatherID": 1,
+            "matherID": 2
+        },
+        "name": "הבל",
+        "born": null,
+        "gender": "male",
+        "deceased": null,
+        "partner": []
+    },
+    {
+        "id": 5,
+        "parents": {
+            "fatherID": 1,
+            "matherID": 2
+        },
+        "name": "שת",
+        "born": 130,
+        "gender": "male",
+        "deceased": 912,
+        "partner": []
+    },
+    {
+        "id": 6,
+        "parents": {
+            "fatherID": 5,
+            "matherID": null
+        },
+        "name": "אנוש",
+        "born": 105,
+        "gender": "male",
+        "deceased": 905,
+        "partner": []
+    },
+    {
+        "id": 7,
+        "parents": {
+            "fatherID": 6,
+            "matherID": null
+        },
+        "name": "קינן",
+        "born": 90,
+        "gender": "male",
+        "deceased": 910,
+        "partner": []
+    },
+    {
+        "id": 8,
+        "parents": {
+            "fatherID": 7,
+            "matherID": null
+        },
+        "name": "מהללאל",
+        "born": 70,
+        "gender": "male",
+        "deceased": 895,
+        "partner": []
+    },
+    {
+        "id": 9,
+        "parents": {
+            "fatherID": 8,
+            "matherID": null
+        },
+        "name": "ירד",
+        "born": 65,
+        "gender": "male",
+        "deceased": 962,
+        "partner": []
+    },
+    {
+        "id": 10,
+        "parents": {
+            "fatherID": 9,
+            "matherID": null
+        },
+        "name": "חנוך",
+        "born": 162,
+        "gender": "male",
+        "deceased": 365,
+        "partner": []
+    },
+    {
+        "id": 11,
+        "parents": {
+            "fatherID": 10,
+            "matherID": null
+        },
+        "name": "מתושלח",
+        "born": 65,
+        "gender": "male",
+        "deceased": 969,
+        "partner": []
+    },
+    {
+        "id": 12,
+        "parents": {
+            "fatherID": 11,
+            "matherID": null
+        },
+        "name": "למך",
+        "born": 187,
+        "gender": "male",
+        "deceased": 777,
+        "partner": []
+    },
+    {
+        "id": 13,
+        "parents": {
+            "fatherID": 12,
+            "matherID": null
+        },
+        "name": "נח",
+        "born": 182,
+        "gender": "male",
+        "deceased": 950,
+        "partner": []
+    },
+    {
+        "id": 14,
+        "parents": {
+            "fatherID": 13,
+            "matherID": null
+        },
+        "name": "יפת",
+        "born": 500,
+        "gender": "male",
+        "deceased": null,
+        "partner": []
+    },
+    {
+        "id": 15,
+        "parents": {
+            "fatherID": 13,
+            "matherID": null
+        },
+        "name": "שם",
+        "born": 502,
+        "gender": "male",
+        "deceased": 600,
+        "partner": []
+    },
+    {
+        "id": 16,
+        "parents": {
+            "fatherID": 13,
+            "matherID": null
+        },
+        "name": "חם",
+        "born": null,
+        "gender": "male",
+        "deceased": null,
+        "partner": []
+    },
+    {
+        "id": 17,
+        "parents": {
+            "fatherID": 15,
+            "matherID": null
+        },
+        "name": "ארפכשד",
+        "born": 100,
+        "gender": "male",
+        "deceased": 438,
+        "partner": []
+    },
+    {
+        "id": 18,
+        "parents": {
+            "fatherID": 17,
+            "matherID": null
+        },
+        "name": "שלח",
+        "born": 35,
+        "gender": "male",
+        "deceased": 433,
+        "partner": []
+    },
+    {
+        "id": 19,
+        "parents": {
+            "fatherID": 18,
+            "matherID": null
+        },
+        "name": "עבר",
+        "born": 30,
+        "gender": "male",
+        "deceased": 464,
+        "partner": []
+    },
+    {
+        "id": 20,
+        "parents": {
+            "fatherID": 19,
+            "matherID": null
+        },
+        "name": "פלג",
+        "born": 34,
+        "gender": "male",
+        "deceased": 239,
+        "partner": []
+    },
+    {
+        "id": 21,
+        "parents": {
+            "fatherID": 20,
+            "matherID": null
+        },
+        "name": "רעו",
+        "born": 30,
+        "gender": "male",
+        "deceased": 239,
+        "partner": []
+    },
+    {
+        "id": 22,
+        "parents": {
+            "fatherID": 21,
+            "matherID": null
+        },
+        "name": "שרוג",
+        "born": 32,
+        "gender": "male",
+        "deceased": 230,
+        "partner": []
+    },
+    {
+        "id": 23,
+        "parents": {
+            "fatherID": 22,
+            "matherID": null
+        },
+        "name": "נחור",
+        "born": 30,
+        "gender": "male",
+        "deceased": 248,
+        "partner": []
+    },
+    {
+        "id": 24,
+        "parents": {
+            "fatherID": 23,
+            "matherID": null
+        },
+        "name": "תרח",
+        "born": 29,
+        "gender": "male",
+        "deceased": 275,
+        "partner": []
+    },
+    {
+        "id": 25,
+        "parents": {
+            "fatherID": 24,
+            "matherID": null
+        },
+        "name": "אברהם",
+        "born": 70,
+        "gender": "male",
+        "deceased": 175,
+        "partner": []
+    },
+    {
+        "id": 26,
+        "parents": {
+            "fatherID": 24,
+            "matherID": null
+        },
+        "name": "נחור",
+        "born": null,
+        "gender": "male",
+        "deceased": null,
+        "partner": []
+    },
+    {
+        "id": 27,
+        "parents": {
+            "fatherID": 26,
+            "matherID": null
+        },
+        "name": "בתואל",
+        "born": null,
+        "gender": "male",
+        "deceased": null,
+        "partner": []
+    },
+    {
+        "id": 28,
+        "parents": {
+            "fatherID": 27,
+            "matherID": null
+        },
+        "name": "רבקה",
+        "born": null,
+        "gender": "female",
+        "deceased": null,
+        "partner": [
+            {
+                "id": 37,
+                "name": "יצחק"
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "parents": {
+            "fatherID": 27,
+            "matherID": null
+        },
+        "name": "לבן",
+        "born": null,
+        "gender": "male",
+        "deceased": null,
+        "partner": []
+    },
+    {
+        "id": 30,
+        "parents": {
+            "fatherID": 24,
+            "matherID": null
+        },
+        "name": "הרן",
+        "born": null,
+        "gender": "male",
+        "deceased": null,
+        "partner": []
+    },
+    {
+        "id": 31,
+        "parents": {
+            "fatherID": 30,
+            "matherID": null
+        },
+        "name": "מלכה",
+        "born": null,
+        "gender": "female",
+        "deceased": null,
+        "partner": [
+            {
+                "id": 26,
+                "name": "נחור"
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "parents": {
+            "fatherID": 30,
+            "matherID": null
+        },
+        "name": "יסכה (שרה)",
+        "born": null,
+        "gender": "female",
+        "deceased": null,
+        "partner": [
+            {
+                "id": 25,
+                "name": "אברהם"
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "parents": {
+            "fatherID": 30,
+            "matherID": null
+        },
+        "name": "לוט",
+        "born": null,
+        "gender": "male",
+        "deceased": null,
+        "partner": []
+    },
+    {
+        "id": 34,
+        "parents": {
+            "fatherID": 25,
+            "matherID": null
+        },
+        "name": "ישמעאל",
+        "born": 86,
+        "gender": "male",
+        "deceased": 137,
+        "partner": []
+    },
+    {
+        "id": 35,
+        "parents": {
+            "fatherID": 34,
+            "matherID": null
+        },
+        "name": "נביות",
+        "born": null,
+        "gender": "male",
+        "deceased": null,
+        "partner": []
+    },
+    {
+        "id": 36,
+        "parents": {
+            "fatherID": 34,
+            "matherID": null
+        },
+        "name": "בשמת",
+        "born": null,
+        "gender": "female",
+        "deceased": null,
+        "partner": [
+            {
+                "id": 39,
+                "name": "עשו"
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "parents": {
+            "fatherID": 25,
+            "matherID": null
+        },
+        "name": "יצחק",
+        "born": 100,
+        "gender": "male",
+        "deceased": 180,
+        "partner": []
+    },
+    {
+        "id": 38,
+        "parents": {
+            "fatherID": 37,
+            "matherID": null
+        },
+        "name": "יעקב",
+        "born": 60,
+        "gender": "male",
+        "deceased": 147,
+        "partner": []
+    },
+    {
+        "id": 39,
+        "parents": {
+            "fatherID": 37,
+            "matherID": null
+        },
+        "name": "עשו",
+        "born": 60,
+        "gender": "male",
+        "deceased": 147,
+        "partner": []
+    }
+]
