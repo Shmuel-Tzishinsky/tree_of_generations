@@ -8,7 +8,7 @@ const letsStart = async () => {
   canvasTree.width = innerWidth;
   canvasTree.height = innerHeight;
 
-  const fat = await fetch("/generations.json");
+  const fat = await fetch("./generations.json");
   const generation = await fat.json();
   let father;
 
